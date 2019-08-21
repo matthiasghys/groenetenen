@@ -1,5 +1,6 @@
 package be.vdab.groenetenen.forms;
 
+import be.vdab.groenetenen.constraints.Postcode;
 import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -8,10 +9,10 @@ import javax.validation.constraints.NotNull;
 public class VanTotPostcode {
 
     @NotNull
-    @Range(min = 1000, max = 9999)
+    @Postcode
     private final int van;
     @NotNull
-    @Range(min = 1000, max= 9999)
+    @Postcode
     private final int tot;
 
 
